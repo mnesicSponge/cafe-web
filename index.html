@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Le Café</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="files/w3.css">
+<link rel="stylesheet" href="files/css.css">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url('files/coffeehouse.jpg');
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head><body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">ACCUEIL</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">A PROPOS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">NOUS TROUVER</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Ouvert tous les jours de 6h00 à 17h00</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Le<br>Café</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">12 rue du Taur, 31000 Toulouse</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">A PROPOS DU CAFE</span></h5>
+    <p>Le Café a été créé en 1972 par M. Smith in lorem ipsum dolor 
+sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>En plus de notre menu complet d'expresso et de bar à bière, nous servons
+des sandwichs frais pour le petit-déjeuner et le déjeuner, ainsi qu'un
+sélection d'accompagnements et de salades et autres bonnes choses.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Utilisez les produits de la nature pour ce qu'ils valent - mais jamais trop tôt, ni trop tard."</i></p>
+      <p>Chef et propriétaire: Paul Vasseur</p>
+    </div>
+    <img src="files/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Horaires d'ouverture:</strong> tous les jours de 6h00 à 17h00</p>
+    <p><strong>Addresse:</strong> 12 rue du Taur, 31000 Toulouse</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">LE MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink w3-dark-grey">Repas</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Boissons</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card" style="display: block;">
+      <h5>Panier à pain</h5>
+      <p class="w3-text-grey">Assortiment de pains et de muffins frais aux fruits cuits au four 5.50</p><br>
+    
+      <h5>Miel Amande Granola aux fruits</h5>
+      <p class="w3-text-grey">Céréales naturelles d’avoine grillée au miel, de raisins secs, d’amandes et de dattes 7.00</p><br>
+    
+      <h5>Gauffre Belge</h5>
+      <p class="w3-text-grey">Pâte aromatisée à la vanille avec farine maltée 7.50</p><br>
+    
+      <h5>Oeufs brouillés</h5>
+      <p class="w3-text-grey">Œufs brouillés, poivron rouge rôti et ail, aux oignons verts 7.50</p><br>
+    
+      <h5>Crêpes aux myrtilles</h5>
+      <p class="w3-text-grey">Avec du sirop, du beurre et beaucoup de myrtilles 8.50</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card" style="display: none;">
+      <h5>Café</h5>
+      <p class="w3-text-grey">Café standard 2.50</p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Expresso au chocolat au lait 4.50</p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Whisky et café 5.00</p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Thé chaud, mais pas chaud 3.00</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>  
+    <img src="files/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">OU NOUS TROUVER</span></h5>
+    <p>Trouvez-nous à une adresse à un endroit donné.</p>
+    <!-- <img src="files/map.jpg" class="w3-image" style="width:100%"> -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.044311452005!2d1.440865015458002!3d43.60561897912303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb61e77bbd7d%3A0x6d8460eacc0dca1!2s12%20Rue%20du%20Taur%2C%2031000%20Toulouse!5e0!3m2!1sfr!2sfr!4v1629916921024!5m2!1sfr!2sfr" 
+    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <p><span class="w3-tag">Bon à savoir !</span></p>  
+    <p>Nous offrons un service de restauration complet pour tout événement, grand ou petit. 
+      Nous comprenons vos besoins et nous répondrons à la nourriture pour 
+      satisfaire les critères les plus grands de tous, à la fois l’apparence et le goût.</p>
+    <p><strong>Reservez</strong> une table, demandez le menu du jour ou envoyez-nous simplement un message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Nom" required="" name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Nombre de personnes" required="" name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required="" name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message / Exigeance particulères" required="" name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">ENVOYER</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Site conçu par <a href="https://www.dahustudio.com" title="Dahu Studio" target="_blank" class="w3-hover-text-green">Dahu Studio</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+
+</body></html>
